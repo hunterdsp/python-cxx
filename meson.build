@@ -2,8 +2,8 @@
 project(
   # Arguments
   # ---------
-  'ext-cxx',      # The name of the project
-  'c', 'cpp',      # The languages that Meson should initialize
+  'python-cxx',      # The name of the project
+  'c', 'cpp',     # The languages that Meson should initialize
 
   # Keyword arguments:
   # ------------------
@@ -25,15 +25,15 @@ project(
 # not the executables that use the library.
 lib_args = ['-DBUILDING_EXT_CXX']
 
-shlib = shared_library('ext_cxx', 'ext_cxx.cpp',
+shlib = shared_library('python_cxx', 'ext_cxx.cpp',
   install : true,
   cpp_args : lib_args,
   gnu_symbol_visibility : 'hidden',
 )
 
-test_exe = executable('ext_cxx_test', 'ext_cxx_test.cpp',
+test_exe = executable('python_cxx_test', 'ext_cxx_test.cpp',
   link_with : shlib)
-test('ext_cxx', test_exe)
+test('python_cxx', test_exe)
 
 # Make this library usable as a Meson subproject.
 ext_cxx_dep = declare_dependency(
@@ -46,8 +46,8 @@ install_headers('ext_cxx.hpp', subdir : 'ext_cxx')
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(
-  name : 'ext-cxx',
-  filebase : 'ext_cxx',
+  name : 'python-cxx',
+  filebase : 'python_cxx',
   description : 'Meson sample project.',
   subdirs : 'ext_cxx',
   libraries : shlib,
@@ -61,7 +61,7 @@ python.install_sources(
 )
 nanobind_dep = dependency('nanobind')
 mod = python.extension_module(
-  'ext_cxx',
+  'python_cxx',
   sources: [
     'src/_core.cpp',           
     'src/array.cpp',
@@ -71,5 +71,5 @@ mod = python.extension_module(
   ],
   dependencies: [nanobind_dep],
   install: true,
-  limited_api: '3.12',
+  # limited_api: '3.12',
 )

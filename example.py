@@ -4,13 +4,13 @@ def main() -> None:
     # Import sub-packages
     import numpy as np
 
-    import ext_cxx as m
+    import python_cxx as m
     from benchmark import BenchMark
 
     x = [1, 2, 3]
     print()
     print("---------------------------------------------------------")
-    print("Hello from ext_exx!!!")
+    print("Hello from python_exx!!!")
     print("A C++ compiled extension that can operate in Python.")
     print(f"For example, given a list {x}...one can use:")
     print("---------------------------------------------------------")

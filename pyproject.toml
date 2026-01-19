@@ -1,5 +1,5 @@
 [project]
-name = "ext-cxx"
+name = "python-cxx"
 version = "0.1.0"
 description = "C++ DSP Extensions for Python."
 readme = "README.md"

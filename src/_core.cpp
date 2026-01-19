@@ -10,7 +10,7 @@ void ext_wrapper(nb::module_ &);
 void ext_array(nb::module_ &);
 
 // The top-level extension
-NB_MODULE(ext_cxx, m) {
+NB_MODULE(python_cxx, m) {
     ext_typecaster(m);
     ext_binding(m);
     ext_wrapper(m);
