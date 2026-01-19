@@ -21,39 +21,6 @@ project(
   version         : '0.1.0',
 )
 
-# These arguments are only used to build the shared library
-# not the executables that use the library.
-lib_args = ['-DBUILDING_EXT_CXX']
-
-shlib = shared_library('python_cxx', 'ext_cxx.cpp',
-  install : true,
-  cpp_args : lib_args,
-  gnu_symbol_visibility : 'hidden',
-)
-
-test_exe = executable('python_cxx_test', 'ext_cxx_test.cpp',
-  link_with : shlib)
-test('python_cxx', test_exe)
-
-# Make this library usable as a Meson subproject.
-ext_cxx_dep = declare_dependency(
-  include_directories: include_directories('.'),
-  link_with : shlib)
-
-# Make this library usable from the system's
-# package manager.
-install_headers('ext_cxx.hpp', subdir : 'ext_cxx')
-
-pkg_mod = import('pkgconfig')
-pkg_mod.generate(
-  name : 'python-cxx',
-  filebase : 'python_cxx',
-  description : 'Meson sample project.',
-  subdirs : 'ext_cxx',
-  libraries : shlib,
-  version : '0.1.0',
-)
-
 # Build Python extension module
 python = import('python').find_installation()
 python.install_sources(
