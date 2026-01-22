@@ -5,10 +5,12 @@
 # dependencies = [
 #     "benchmarkme",
 #     "numpy>=2.3",
+#     "python-cxx",
 # ]
 #
 # [tool.uv.sources]
 # benchmarkme = { git = "https://github.com/hunterdsp/benchmarkme.git" }
+# python-cxx = { path = "." }
 # ///
 
 
