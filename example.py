@@ -1,5 +1,18 @@
+#!/usr/bin/env python
+#
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "benchmarkme",
+#     "numpy>=2.3",
+# ]
+#
+# [tool.uv.sources]
+# benchmarkme = { git = "https://github.com/hunterdsp/benchmarkme.git" }
+# ///
+
+
 def main() -> None:
-    print("Hello from example!")
 
     # Import sub-packages
     import numpy as np
