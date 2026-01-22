@@ -37,7 +37,7 @@ def main() -> None:
     ema = m.ExpAverage()
     ema.step(x)
     print(f"Exponential average: {x.real}")
-    samples = 102400
+    samples = 409600
     x = np.ones(samples, dtype=np.complex128)
     bmk = BenchMark(
         f=ema.step,
