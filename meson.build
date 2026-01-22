@@ -25,6 +25,7 @@ project(
 python = import('python').find_installation()
 python.install_sources(
     meson.current_source_dir() / 'src' / 'python_cxx' / '__init__.py',
+    meson.current_source_dir() / 'src' / 'example.py',
 )
 nanobind_dep = dependency('nanobind')
 mod = python.extension_module(
