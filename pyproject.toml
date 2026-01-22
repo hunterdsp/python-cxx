@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.3",
     "nanobind>=2.10.2",
-    "benchmark",
+    "benchmarkme",
 ]
 
 [project.scripts]
@@ -35,12 +35,7 @@ extra-build-dependencies = { mesonpy = [
 no-build-isolation-package = ["nanobind"]
 
 [tool.uv.sources]
-benchmark = { workspace = true }
-
-[tool.uv.workspace]
-members = [
-    "benchmark",
-]
+benchmarkme = { git = "https://github.com/hunterdsp/benchmarkme.git" }
 
 [build-system]
 requires = ["meson-python>=0.18"]

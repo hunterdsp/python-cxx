@@ -5,7 +5,7 @@ def main() -> None:
     import numpy as np
 
     import python_cxx as m
-    from benchmark import BenchMark
+    from benchmarkme import BenchMark
 
     x = [1, 2, 3]
     print()

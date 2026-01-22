@@ -2,22 +2,10 @@ version = 1
 revision = 3
 requires-python = ">=3.12"
 
-[manifest]
-members = [
-    "benchmark",
-    "python-cxx",
-]
-
 [[package]]
-name = "benchmark"
+name = "benchmarkme"
 version = "0.1.0"
-source = { editable = "benchmark" }
-dependencies = [
-    { name = "numpy" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "numpy", specifier = ">=2.3" }]
+source = { git = "https://github.com/hunterdsp/benchmarkme.git#b2d1413e02edfbe7d566ff6cf5643dac0ac76301" }
 
 [[package]]
 name = "nanobind"
@@ -94,14 +82,14 @@ name = "python-cxx"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "benchmark" },
+    { name = "benchmarkme" },
     { name = "nanobind" },
     { name = "numpy" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "benchmark", editable = "benchmark" },
+    { name = "benchmarkme", git = "https://github.com/hunterdsp/benchmarkme.git" },
     { name = "nanobind", specifier = ">=2.10.2" },
     { name = "numpy", specifier = ">=2.3" },
 ]
