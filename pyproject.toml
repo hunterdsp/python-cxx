@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.3",
     "nanobind>=2.10.2",
-    "benchmarkme",
+    "benchmarkme>=0.1.0a2",
 ]
 
 [project.scripts]
@@ -49,9 +49,6 @@ doctest_optionflags = [
     "NORMALIZE_WHITESPACE",
     "IGNORE_EXCEPTION_DETAIL"
 ]
-
-[tool.uv.sources]
-benchmarkme = { git = "https://github.com/hunterdsp/benchmarkme.git" }
 
 [build-system]
 requires = ["meson-python>=0.18"]
