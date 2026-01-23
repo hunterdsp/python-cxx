@@ -82,7 +82,9 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install .
 ```
 
-## Developer Installation & Workflow
+## For Developers
+
+### Install
 
 [Get `uv`](https://docs.astral.sh/uv/getting-started/installation/)
 
@@ -101,5 +103,15 @@ Synchronize dependencies and install
 ```{console=}
 uv sync
 ```
+
+### Develop
+
+- Edit the code
+- Add test(s)
+- Synchronize `uv sync`
+- Submit a pull-request!
+
+
+
 
 ... more coming soon ... **Have Fun!!!**

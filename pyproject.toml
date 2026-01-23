@@ -34,6 +34,17 @@ extra-build-dependencies = { mesonpy = [
 ] }
 no-build-isolation-package = ["nanobind"]
 
+[tool.pytest.ini_options]
+addopts = [
+    "--doctest-modules",
+    "--import-mode=importlib"  # Recommended for modern projects
+]
+doctest_optionflags = [
+    "ELLIPSIS",
+    "NORMALIZE_WHITESPACE",
+    "IGNORE_EXCEPTION_DETAIL"
+]
+
 [tool.uv.sources]
 benchmarkme = { git = "https://github.com/hunterdsp/benchmarkme.git" }
 
