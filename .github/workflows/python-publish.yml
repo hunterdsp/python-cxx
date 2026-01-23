@@ -25,7 +25,6 @@ jobs:
       - name: Install Python 3.12
         run: uv python install 3.12
       - uses: actions/checkout@v5
-      - uses: actions/setup-python
       - name: Build
         run: uvx cibuildwheel
       - name: Publish
