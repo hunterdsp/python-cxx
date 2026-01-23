@@ -51,7 +51,7 @@ doctest_optionflags = [
 ]
 
 [build-system]
-requires = ["meson-python>=0.18"]
+requires = ["meson-python>=0.18", "cibuildwheel"]
 build-backend = "mesonpy"
 
 [dependency-groups]
