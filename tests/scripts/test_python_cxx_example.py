@@ -5,4 +5,4 @@ def test_script():
     from subprocess import check_call
 
     assert check_call([
-        'bash', '-c', 'uv run', '--no-editable python-cxx-example',])
+        'bash', '-c', 'uv run', '--no-editable', 'python-cxx-example',])
