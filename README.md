@@ -51,7 +51,7 @@ Benchmark Results
 ```
 
 Experiment with the example script (`python-cxx/example.py`), use with the
-interpreter, or add your own scripts!
+interpreter, or add your own features!
 
 ```{python}
 >>> import numpy as np
