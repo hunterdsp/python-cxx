@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-python-cxx-example = 'scripts.python_cxx_example:main'
+python-cxx-example = 'python_cxx_example:main'
 
 [tool.uv]
 cache-dir = "./.uv_cache"
