@@ -1,3 +1,10 @@
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fhunterdsp%2Fpython-cxx%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)
+![PyPI - Implementation](https://img.shields.io/pypi/implementation/python-cxx)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hunterdsp/python-cxx/python-publish.yml)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/python-cxx)
+![GitHub License](https://img.shields.io/github/license/hunterdsp/python-cxx)
+
 # python-cxx
 
 C/C++ DSP Extensions for Python.
