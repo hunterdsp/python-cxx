@@ -63,7 +63,7 @@ interpreter, or add your own scripts!
 
 ## Source Installation
 
-Get the code and move into project directory
+Get the code and move into the project directory
 
 ```{console=}
 git clone https://github.com/hunterdsp/python-cxx.git && cd python-cxx
@@ -82,8 +82,6 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install .
 ```
 
-
-
 ## Developer Installation & Workflow
 
 [Get `uv`](https://docs.astral.sh/uv/getting-started/installation/)
@@ -92,7 +90,7 @@ pip install .
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Get the code and move into project directory
+Get the code go to the project directory
 
 ```{console=}
 git clone https://github.com/hunterdsp/python-cxx.git && cd python-cxx
