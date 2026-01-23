@@ -2,6 +2,11 @@
 
 C/C++ DSP Extensions for Python.
 
+Building the foundation for a fast, reliable, easy-to-use signal processing
+toolset.
+
+This package is about real-world utility, learning, and most of all fun!
+
 ## Installation
 
 [With `uv`](https://docs.astral.sh/uv/getting-started/installation/)
@@ -112,6 +117,7 @@ uv sync
 - Synchronize: `uv sync`
 - Run scripts e.g.: `uv run --no-editable python-cxx-example`
 - Ensure ALL tests pass: `uvx pytest`
+- Repeat until you make it here with no failures
 - Submit a pull-request!
 
 
