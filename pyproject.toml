@@ -1,6 +1,6 @@
 [project]
 name = "python-cxx"
-version = "0.1.0a5"
+version = "0.1.0a6"
 description = "C++ DSP Extensions for Python."
 readme = "README.md"
 authors = [

@@ -27,4 +27,4 @@ jobs:
       - name: Build
         run: uvx cibuildwheel --platform linux
       - name: Publish
-        run: uv publish --directory /home/runner/work/python-cxx/python-cxx/wheelhouse
+        run: uv publish ./wheelhouse/*.whl
