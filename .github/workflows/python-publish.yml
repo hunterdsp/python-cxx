@@ -27,6 +27,6 @@ jobs:
       - name: Build
         run: uv build
       - name: Convert to manylinux
-        run: uv run auditwheel *.whl:w
+        run: uv run auditwheel *.whl
       - name: Publish
         run: uv publish
