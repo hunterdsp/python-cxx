@@ -26,7 +26,7 @@ Once the package has been installed you can run the example with
 python-cxx-example
 ```
 
-You should see something like this
+If successful, you should see something like this
 
 ```{console=}
 ---------------------------------------------------------
@@ -50,8 +50,8 @@ Benchmark Results
 * Worst speed: 140 Mitems / sec
 ```
 
-Feel free to experiment with the example script (`python-cxx/example.py`), 
-use with the interpreter, or write your own scripts.
+Experiment with the example script (`python-cxx/example.py`), use with the
+interpreter, or add your own scripts!
 
 ```{python}
 >>> import numpy as np
