@@ -1,6 +1,6 @@
 [project]
 name = "python-cxx"
-version = "0.1.0"
+version = "0.1.0a0"
 description = "C++ DSP Extensions for Python."
 readme = "README.md"
 authors = [
@@ -53,3 +53,8 @@ doctest_optionflags = [
 [build-system]
 requires = ["meson-python>=0.18"]
 build-backend = "mesonpy"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
