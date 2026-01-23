@@ -41,7 +41,6 @@ testpaths = [
     "tests",
 ]
 addopts = [
-    '--doctest-glob="*.cpp"',
     "--import-mode=importlib"  # Recommended for modern projects
 ]
 doctest_optionflags = [
