@@ -108,8 +108,10 @@ uv sync
 
 - Edit the code
 - Add testing
+- Commit!
 - Synchronize: `uv sync`
-- Ensure ALL tests pass: `uv run pytest`
+- Run scripts e.g.: `uv run --no-editable python-cxx-example`
+- Ensure ALL tests pass: `uvx pytest`
 - Submit a pull-request!
 
 
