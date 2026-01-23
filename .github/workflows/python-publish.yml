@@ -9,7 +9,7 @@ on:
 jobs:
   pypi:
     name: Publish to PyPI
-    runs-on: manylinux2014
+    runs-on: ubuntu-latest
     # Environment and permissions trusted publishing.
     environment:
       # Create this environment in the GitHub repository under Settings -> Environments
