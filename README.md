@@ -20,7 +20,7 @@ pip install git+github.com/hunterdsp/python-cxx.git
 
 ## Usage
 
-Once the package has been installed you can run the provide example directly
+Once the package has been installed you can run the example with
 
 ```{cosole=}
 python-cxx-example
