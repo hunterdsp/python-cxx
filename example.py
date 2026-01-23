@@ -15,7 +15,6 @@
 
 
 def main() -> None:
-
     # Import sub-packages
     import numpy as np
 
