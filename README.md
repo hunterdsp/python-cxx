@@ -107,8 +107,9 @@ uv sync
 ### Develop
 
 - Edit the code
-- Add test(s)
-- Synchronize `uv sync`
+- Add testing
+- Synchronize: `uv sync`
+- Ensure ALL tests pass: `uv run pytest`
 - Submit a pull-request!
 
 

@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-python-cxx-example = 'python_cxx_example:main'
+python-cxx-example = 'scripts/python_cxx_example:main'
 
 [tool.uv]
 cache-dir = "./.uv_cache"
@@ -36,7 +36,7 @@ no-build-isolation-package = ["nanobind"]
 
 [tool.pytest.ini_options]
 testpaths = [
-    "python-cxx-example.py",
+    "scripts",
     "src",
     "tests",
 ]
