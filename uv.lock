@@ -144,7 +144,7 @@ wheels = [
 
 [[package]]
 name = "python-cxx"
-version = "0.1.0a0"
+version = "0.1.0a2"
 source = { editable = "." }
 dependencies = [
     { name = "benchmarkme" },
