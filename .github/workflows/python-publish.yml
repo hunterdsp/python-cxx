@@ -24,7 +24,6 @@ jobs:
         uses: astral-sh/setup-uv@v6
       - name: Install Python 3.12
         run: uv python install 3.12
-      - uses: actions/checkout@v5
       - name: Build
         run: uvx cibuildwheel
       - name: Publish
