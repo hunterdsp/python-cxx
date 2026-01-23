@@ -36,6 +36,7 @@ no-build-isolation-package = ["nanobind"]
 
 [tool.pytest.ini_options]
 testpaths = [
+    "python-cxx-example.py",
     "src",
     "tests",
 ]
