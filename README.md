@@ -90,7 +90,7 @@ pip install .
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Get the code go to the project directory
+Get the code and go to the project directory
 
 ```{console=}
 git clone https://github.com/hunterdsp/python-cxx.git && cd python-cxx
