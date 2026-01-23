@@ -35,4 +35,4 @@ jobs:
         uv format
     - name: Test with pytest
       run: |
-        uv pytest
+        uv run pytest
