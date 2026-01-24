@@ -11,6 +11,26 @@ permissions:
   contents: read
 
 jobs:
+  build-sdis:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
+      with: 
+        python-version: "3.12"
+    - name: Lint with uv
+      run: |
+        uv format
+    - name: Build sdist
+      run: uv build --sdist
+    - name: Upload distributions
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-dists
+        path: dist/
   release-build:
     runs-on: ubuntu-latest
     strategy:
@@ -23,11 +43,6 @@ jobs:
       uses: astral-sh/setup-uv@v7
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Build sdist
-      run: uv build --sdist
-    - name: Lint with uv
-      run: |
-        uv format
     - name: Build wheel
       run: uvx cibuildwheel --output-dir dist/
     - name: Upload distributions
