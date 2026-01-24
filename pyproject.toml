@@ -1,6 +1,6 @@
 [project]
 name = "python-cxx"
-version = "0.1.0b5"
+version = "0.1.0b6"
 description = "C++ DSP Extensions for Python."
 readme = "README.md"
 authors = [
@@ -35,7 +35,7 @@ extra-build-dependencies = { mesonpy = [
 no-build-isolation-package = ["nanobind"]
 
 [tool.cibuildwheel]
-skip = "pp"
+skip = ["pp", "cp*-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"]
 build-frontend = "build[uv]"
 
 [tool.pytest.ini_options]
