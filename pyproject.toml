@@ -35,6 +35,7 @@ extra-build-dependencies = { mesonpy = [
 no-build-isolation-package = ["nanobind"]
 
 [tool.cibuildwheel]
+test-sources = ["tests", "src", "scripts"]
 test-requires = "pytest"
 test-command = "uv run pytest"
 build-frontend = "build[uv]"
