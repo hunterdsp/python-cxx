@@ -18,7 +18,7 @@ project(
   # Specifies the top level directory name that holds Meson subprojects
   subproject_dir  : 'subprojects',                                       
   # A free form string describing the version of this project
-  version         : '0.1.0a6',
+  version         : '0.1.0b0',
 )
 
 # Build Python extension module
@@ -39,5 +39,5 @@ mod = python.extension_module(
   ],
   dependencies: [nanobind_dep],
   install: true,
-  # limited_api: '3.12',
+  limited_api: '3.12',
 )
