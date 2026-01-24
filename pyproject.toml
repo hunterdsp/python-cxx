@@ -35,7 +35,7 @@ extra-build-dependencies = { mesonpy = [
 no-build-isolation-package = ["nanobind"]
 
 [tool.cibuildwheel]
-skip = ["pp", "cp*-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"]
+test-command = "uv run pytest"
 build-frontend = "build[uv]"
 
 [tool.pytest.ini_options]

@@ -23,16 +23,13 @@ jobs:
       uses: astral-sh/setup-uv@v7
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Build
-      run: |
-        uv build --sdist
-        uvx cibuildwheel --output-dir dist/
+    - name: Build sdist
+      run: uv build --sdist
     - name: Lint with uv
       run: |
         uv format
-    - name: Test with pytest
-      run: |
-        uv run pytest
+    - name: Build wheel
+      run: uvx cibuildwheel --output-dir dist/
     - name: Upload distributions
       uses: actions/upload-artifact@v4
       with:
