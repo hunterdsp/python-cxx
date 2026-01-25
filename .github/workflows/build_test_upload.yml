@@ -20,6 +20,7 @@ jobs:
     - name: Install uv
       uses: astral-sh/setup-uv@v7
       with: 
+        prune-cache: false
         python-version: "3.12"
     - name: Lint with uv
       run: |
@@ -46,6 +47,7 @@ jobs:
       uses: astral-sh/setup-uv@v7
       with:
         python-version: ${{ matrix.python-version }}
+        prune-cache: false
     - name: Build wheel
       run: uvx cibuildwheel --output-dir dist/
     - name: Upload distributions
@@ -61,7 +63,6 @@ jobs:
     needs:
       - build-wheels
     permissions:
-      # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
       contents: read
     environment:
@@ -75,5 +76,7 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v7
+        with:
+          prune-cache: false
       - name: Publish release distributions to PyPI
         run: uv publish dist/*.whl
