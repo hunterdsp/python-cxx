@@ -3,10 +3,9 @@ name: Build, Test & Upload Python Package
 on:
   push:
     tags:
-      -v*
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+      - v*
+    branches:  
+      - main
 permissions:
   contents: read
 

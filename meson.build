@@ -18,7 +18,7 @@ project(
   # Specifies the top level directory name that holds Meson subprojects
   subproject_dir  : 'subprojects',                                       
   # A free form string describing the version of this project
-  version         : '0.1.0b7',
+  version         : '0.1.0b8',
 )
 
 # Build Python extension module
