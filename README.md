@@ -14,24 +14,11 @@ toolset.
 
 This package is about real-world utility, learning, and most of all fun!
 
-## Installation
-
-[With `uv`](https://docs.astral.sh/uv/getting-started/installation/)
-(install `uv` with `curl -LsSf https://astral.sh/uv/install.sh | sh`)
+## Installation & Usage
 
 ```{console=}
-uv venv && . .venv/bin/activate
-uv pip install https://github.com/hunterdsp/python-cxx.git
+pip install python-cxx
 ```
-
-or `pip`
-
-```{console=}
-python3 -m venv .venv && . .venv/bin/activate
-pip install https://github.com/hunterdsp/python-cxx.git
-```
-
-## Usage
 
 Once the package has been installed you can run the example with
 
@@ -64,7 +51,7 @@ Benchmark Results
 ```
 
 Experiment with the example script (`python-cxx/example.py`), use with the
-interpreter, or add your own features!
+interpreter, or get the source and add your own features!
 
 ```{python}
 >>> import numpy as np
@@ -74,28 +61,7 @@ interpreter, or add your own features!
 [0, 1, 2]
 ```
 
-## Source Installation
-
-Get the code and move into the project directory
-
-```{console=}
-git clone https://github.com/hunterdsp/python-cxx.git && cd python-cxx
-```
-
-Install with `uv` (recommended)
-
-```{console=}
-uv sync
-```
-
-or `pip`
-
-```{console=}
-python3 -m venv .venv && . .venv/bin/activate
-pip install .
-```
-
-## For Developers
+## Source Installation & Development
 
 ### Install
 
