@@ -1,11 +1,11 @@
+# python-cxx
+
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 ![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fhunterdsp%2Fpython-cxx%2Frefs%2Fheads%2Fmain%2Fpyproject.toml)
 ![PyPI - Implementation](https://img.shields.io/pypi/implementation/python-cxx)
 ![Build](https://img.shields.io/github/actions/workflow/status/hunterdsp/python-cxx/build_test_upload.yml)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/python-cxx)
 ![GitHub License](https://img.shields.io/github/license/hunterdsp/python-cxx)
-
-# python-cxx
 
 C/C++ DSP Extensions for Python.
 
@@ -92,9 +92,6 @@ uv sync
 - Run scripts e.g.: `uv run --no-editable python-cxx-example`
 - Ensure ALL tests pass: `uvx pytest`
 - Repeat until you make it here with no failures
-- Submit a pull-request!
-
-
-
+- Submit a pull-request
 
 ... more coming soon ... **Have Fun!!!**
