@@ -18,31 +18,35 @@ def main() -> str:
             print(f"Failed to install the wheel file: {e}")
             # Handle installation error if necessary
 
-    projectpath = Path(__file__).parent.parent.parent
+    version = subprocess.check_output(
+        ['uv', 'version', '--short'],text=True).strip('\n')
+    projectpath = Path(__file__).parent.parent
     buildpath = projectpath.joinpath("dist")
-    whlpath = buildpath.joinpath("ext_cxx-0.1.0-cp312-cp312-linux_x86_64.whl")
+    whlpath = buildpath.joinpath(
+        f"python_cxx-{version}-cp312-cp312-linux_x86_64.whl"
+    )
     print(whlpath)
     install_wheel(whlpath)
 
     from importlib import import_module
     from nanobind.stubgen import StubGen, load_pattern_file
 
-    ext_cxx = import_module("ext_cxx")
-    from ext_cxx import __init__
+    python_cxx = import_module("python_cxx")
+    from python_cxx import __init__
     from __init__ import __all__
 
-    output_file = projectpath.joinpath("ext-cxx/src/ext_cxx/_core.pyi")
+    output_file = projectpath.joinpath("src/python_cxx/_core.pyi")
     sg = StubGen(
-        ext_cxx,
+        python_cxx,
         recursive=False,
         output_file=output_file,
         patterns=load_pattern_file(
-            str(projectpath.joinpath("ext-cxx/buildscripts/patternfile"))
+            str(projectpath.joinpath("buildscripts/patternfile"))
         ),
     )
     for modname in __all__:
-        mod = getattr(ext_cxx, modname)
-        sg.put(mod, modname, ext_cxx)
+        mod = getattr(python_cxx, modname)
+        sg.put(mod, modname, python_cxx)
         stub = sg.get()
         print(f"generated {modname} stub")
         print("######################################")
