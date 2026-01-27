@@ -75,7 +75,7 @@ jobs:
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
-          name: release-dists-${{ matrix.python-version}}
+          name: release-dists-*
           path: dist/*.whl
 
       - name: Install uv
