@@ -20,14 +20,15 @@ This package is about real-world utility, learning, and most of all fun!
 (install `uv` with `curl -LsSf https://astral.sh/uv/install.sh | sh`)
 
 ```{console=}
-uv install git+github.com/hunterdsp/python-cxx.git
+uv venv && . .venv/bin/activate
+uv pip install https://github.com/hunterdsp/python-cxx.git
 ```
 
 or `pip`
 
 ```{console=}
 python3 -m venv .venv && . .venv/bin/activate
-pip install git+github.com/hunterdsp/python-cxx.git
+pip install https://github.com/hunterdsp/python-cxx.git
 ```
 
 ## Usage
