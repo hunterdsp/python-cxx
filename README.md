@@ -95,3 +95,53 @@ uv sync
 - Submit a pull-request
 
 ... more coming soon ... **Have Fun!!!**
+
+#### Debugging
+
+Create a debug environment and install ALL dependencies adding `meson-python`
+
+```{console=}
+uv venv .venv.debug --clear
+. .venv.debug/bin/activate
+uv pip install . meson-python
+```
+
+Build the extension with debug symbols
+
+```{console=}
+uv pip install --editable . --no-build-isolation \
+    -Csetup-args=-Dbuildtype=debug \
+    -Cbuild-dir=build-dbg
+```
+
+Attach to the example with `gdb` and set a breakpoint on the `step` method
+
+```{console=}
+gdb --args python3.12 -c "from python_cxx_example import main; main()"
+break step
+run
+```
+
+You should see the debugger stop on the first call to `step()` like so
+
+```{console=}
+
+[New Thread 0x7fffcddf26c0 (LWP 612534)]
+[New Thread 0x7fffcd5f16c0 (LWP 612539)]
+Downloading separate debug info for ...
+
+---------------------------------------------------------
+Hello from python_cxx!!!
+A C++ compiled extension that can operate in Python.
+For example, given a list [1, 2, 3]...one can use:
+---------------------------------------------------------
+* Typecasting to e.g. square: python_cxx.IntVector([1, 4, 9])
+* Binding to e.g. double: python_cxx.IntVector([2, 4, 6])
+* Or wrap an operation like decrement: [0, 1, 2]!
+Executing a C++ class method on [1. 1. 1. 1. 1.] gives:
+
+Thread 1 "python3.12" hit Breakpoint 1.1, ExpAverage::step (this=0x7ffff49cd708, x=...) at ../src/array.cpp:18
+18           void step(nanobind::ndarray<nanobind::c_contig, nanobind::device::cpu> x) {
+(gdb) 
+
+```
