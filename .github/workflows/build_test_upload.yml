@@ -70,8 +70,9 @@ jobs:
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
-          name: release-sdists
-          path: dist/*.tar.gz
+          pattern: release-sdists
+          path: dist
+          merge-multiple: true
       - name: Install uv
         uses: astral-sh/setup-uv@v7
         with:
@@ -97,9 +98,9 @@ jobs:
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
-          name: release-dists-${{ matrix.python-version}}
-          path: dist/*.whl
-
+          pattern: release-dist*
+          path: dist
+          merge-multiple: true
       - name: Install uv
         uses: astral-sh/setup-uv@v7
         with:
