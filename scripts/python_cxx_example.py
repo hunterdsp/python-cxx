@@ -3,18 +3,14 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#     "benchmarkme",
+#     "benchmarkme>=0.1.0a2",
 #     "numpy>=2.3",
-#     "python-cxx",
+#     "python-cxx>=0.1.0b22",
 # ]
-#
-# [tool.uv.sources]
-# benchmarkme = { git = "https://github.com/hunterdsp/benchmarkme.git" }
-# python-cxx = { path = "." }
 # ///
 
+def main():
 
-def main() -> None:
     # Import sub-packages
     import numpy as np
 
@@ -49,6 +45,5 @@ def main() -> None:
     print()
     bmk()
 
-
-if __name__ == "__main__":
+if __name__ == "main":
     main()

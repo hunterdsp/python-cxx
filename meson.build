@@ -23,10 +23,9 @@ project(
 
 # Build Python extension module
 python = import('python').find_installation()
-python.install_sources(
-    meson.current_source_dir() / 'src' / 'python_cxx' / '__init__.py',
-    meson.current_source_dir() / 'scripts' / 'python_cxx_example.py',
-    subdir: 'python_cxx',
+install_data(
+    'scripts' / 'python_cxx_example.py',
+    install_dir: get_option('bindir'),
 )
 nanobind_dep = dependency('nanobind')
 mod = python.extension_module(
